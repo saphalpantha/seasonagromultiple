@@ -1,0 +1,21 @@
+.curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -1;
+}
+
+.curve svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 407px;
+    transform: rotateY(180deg);
+}
+
+.curve .shapefill {
+    fill: #ff6f00;
+}
