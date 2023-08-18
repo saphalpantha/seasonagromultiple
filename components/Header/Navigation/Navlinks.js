@@ -12,7 +12,7 @@ const Navlinks = () => {
 
   const numberOfCartItems = ctx.items.reduce((curNum, item) => {
     return curNum + item.qty
-  }, 0)
+  }, 0) 
   const cartOpenHandler = () => {
       setShowCart(prev => !prev)
   }
@@ -36,10 +36,8 @@ const Navlinks = () => {
             <span className='w-auto px-3 py-2 bg-orange-300 rounded-md hover:bg-orange-500 hover:text-gray-100 duration-150 shadow-sm'><Link href="/contact">Contact us</Link></span>
         </ul>
     </nav>
-{   showCart &&   <div onClick={cartCloseHandler} className='bg-orange-500 w-[4rem] h-[4rem]  rounded-full absolute  top-5  right-0 md:right-[27%]  z-50 hover:rotate-[360deg] hover:bg-orange-900 duration-300 cursor-pointer'>
-      <h1 className='text-4xl absolute top-2 left-4 text-white  font-bold text-center'>✘</h1>
-    </div>}
-    {showCart && <Modal className=''>
+
+    {showCart && <Modal onClick={cartCloseHandler} className=''>
         <div className='flex flex-col space-y-2 text-left px-5 md:px-4 h-[50vh]' >
             <div>
               <CartLists/>
